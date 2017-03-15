@@ -2,8 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Xani-projects</title>
-    <script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="My second, super-cool, Jekyll-powered blog.">
+    <title>I-Found Сервис поиска пропавших людей</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="manifest" href="/icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -13,8 +34,268 @@
         ga('send', 'pageview');
 
     </script>
+
+    <script>
+        var trackOutboundLink = function(url) {
+            ga('send', 'event', 'outbound', 'click', url, {
+                'transport': 'beacon',
+                'hitCallback': function(){document.location = url;}
+            });
+        }
+    </script>
+    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+          rel="stylesheet" type="text/css">
+    <link href="/css/landing.css" rel="stylesheet" type="text/css">
+    <script src="/js/jquery.min.js"> </script>
 </head>
 <body>
-<h1>Тестовая страница</h1>
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                Меню <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="/">I-Found</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/donate/">Помощь проекту</a>
+                </li>
+                <li>
+                    <a href="/documentation/">Тех. документация</a>
+                </li>
+                <li>
+                    <a href="/volunteers/">Волонтёры</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<header class="large-header intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>I-Found</h1>
+                    <hr class="small">
+                    <span class="subheading">Сервис для поиска пропавших людей</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 content">
+            
+<p>
+    Любая проблема может быть решена гораздо быстрее, если Вы не единственный, кто ее решает. Особенно это касается
+    пропажи людей. I-Found - это проект сервиса, позволяющего Вам мгновенно уведомить всех жителей Вашего города о
+    пропаже человека и привлечь их к поискам. Для этого наш сервис объединяет в себе все самые эффективные каналы
+    передачи информации и современные IT-технологии.
+</p>
+<div class="alert alert-info" role="alert" id="before-frame">
+    Представленное ниже "демо" не является конечным продуктом. Оно сделано для того, чтобы вам было легче представить принцип работы приложения
+</div>
+<script>
+    var demo = true;
+    var e = document.createElement("iframe");
+    if(!e) {
+        demo = false
+    }
+    if(demo){
+        if(window.screen.availWidth < 350 || window.screen.availHeight < 350){
+            demo = false
+        }
+    }
+    var el = $('#before-frame')
+    if (demo == false){
+        el.after('<a target="_blank" href="/demo/"><img src="/images/open-demo-new.png" width="100%"></a>')
+    } else {
+        el.after('<iframe src="/demo/" width="320" height="568" align="right" id="demo-frame"><img src="img/open-demo-new.png" width="100%"></iframe>');
+    }
+    /*
+     <iframe src="../demo/index.html" width="320" height="568" align="right" id="demo-frame">
+     Ваш браузер не поддерживает плавающие фреймы!
+     </iframe>
+     */
+</script>
+<h2>Это важно!</h2>
+<p>Проблема пропажи людей не новая, она существует уже очень долго. Но мы до сих пор не можем хотя бы немного сократить
+    количество пропавших. По разным данным в год в среднем пропадает около 150000 человек (в России)! Создаются
+    волонтерские отряды, различные общественные объединения, готовые помочь в поисках пропавших. Но какой в этом толк,
+    если люди обращаются за помощью к этим отрядам (или бегут заполнять заявление в полицию) в самый последний момент?
+    Итак, почему же в такой ситуации Вы не можете положиться только на знакомых и социальные сети?</p>
+<h3>Звонки знакомым</h3>
+<p>С чего обычно начинаются поиски пропавшего человека? С того, что это никакая не пропажа: скорее всего он задержался у
+    друзей или где-нибудь еще. Так или иначе, первое, что предпринимается в таких случаях - это обзвон всех друзей и
+    знакомых и, если это необходимо, привлечение их к поискам. Но сколько у Вас таких людей? Десять? Даже если
+    количество Ваших знакомых больше ста: во-первых, этого все равно может быть недостаточно, а во-вторых, не все из
+    этих ста будут Вам помогать.</p>
+<h3>Социальные сети</h3>
+<p>Социальные сети могут помочь Вам в привлечении людей. После того, как Вы поймете, что звонки знакомым и друзьям
+    результата не приносят, скорее всего, станете выкладывать объявление о пропаже в социальные сети. Но эти площадки
+    также не гарантируют Вам мгновенного распространения этого объявления, а тем более реального привлечения людей.
+    Лайкнуть и сделать репост может каждый, но сколько из них встанут и пойдут искать пропавшего?</p>
+<h3>Детали и контроль</h3>
+<p>Исходя из сложившейся практики независимо от причин исчезновения человека, поиск ускоряет объем предварительной
+    информации о пропавшем. Вы вряд ли сразу сможете вспомнить, в чем он ушел или уже после публикации объявления
+    решите, что нужно было добавить места, где пропавший чаще всего бывает. У Вас также нет возможности контролировать
+    действия участников поиска, отслеживать, какие места уже были проверены, а какие еще нет и т.д. Мы привыкли, что
+    можем решить любую проблему “в два клика”, а столкнувшись с исчезновением человека, окажемся в замешательстве. На
+    самом деле “два клика” могут работать и здесь! Об этом расскажем дальше.</p>
+
+<h2>Как работает сервис?</h2>
+<h3>Если Вы ищете человека</h3>
+<p>Если Вы хотите заявить об исчезновении человека и организовать поиски, нужно создать заявку. Это не отнимает много
+    времени, так как регистрироваться Вам при этом не обязательно. Необходимо лишь внести в объявление всю необходимую
+    информацию о пропавшем, загрузить фотографию. Для эффективности поиска Вы можете отметить места на карте, которые
+    пропавший посещает чаще всего (или те, в которых он может находиться сейчас/где его видели в последний раз).
+    <br/>
+    Указанная Вами информация отправляется на сервер, а затем распространяется на все мобильные устройства жителей
+    Вашего города, которые в данный момент находятся в сети. Большим преимуществом является то, что Вы можете в любое
+    время обновить информацию в своем объявлении: указать новые детали, отметить места на карте, убрать какую-то
+    информацию, изменить или добавить еще фото и т.д. Также Вы можете добавлять людей, которые будут управлять заявкой,
+    если есть такая потребность (редактировать её, изменять статус и т.д.). Оформление и изменение заявки в режиме
+    онлайн - не единственное преимущество. После того, как другие пользователи увидят Ваше объявление и присоединятся к
+    поискам, Вы сможете видеть их действия. Так, например, приложение будет показывать Вам места на карте, которые уже
+    были проверены участниками поиска, и те, в которых поиски еще не проводились.
+    <br/>Закончить поиск так же просто: после того, как человек обнаружен, Вы меняете статус объявления на “Найден”.
+    Приложение мгновенно оповестит об этом всех пользователей и поиски прекратятся.
+</p>
+<h3>Если Вы хотите помочь с поиском</h3>
+<p>Если Вы участник волонтерского отряда или желаете помочь по собственной инициативе, приложение сообщит Вам о поисках,
+    к которым Вы можете присоединиться. В настройках Вы можете выбрать о каких пропавших хотите получать уведомления.
+    Приложение может уведомлять Вас о пропаже только несовершеннолетних или же о любых новых объявлениях. Кроме
+    возрастного критерия, приложение может сортировать объявления исходя их тех мест, где Вы чаще всего бываете, и
+    уведомлять Вас, если пропавшего видели в этих местах (например, в последний раз пропавшего видели недалеко от места
+    Вашей работы/дома).Также Вас оповестят, если в данный момент Вы находитесь в месте, где ведутся поиски. Другими
+    словами Вы сейчас находитесь в зоне поиска или же вошли в неё.
+    <br/>Для того, чтобы Вы своевременно могли получать уведомления в “фоне” висит задача, которая по каналу (сокету)
+    постоянно связана с сервером. И когда на сервере появляется новая заявка, она тут же отправляется клиенту. После
+    этого клиент смотрит, подходит ли заявка по выбранным пользователем параметрам, и если подходит, Вы получаете
+    уведомление о том, что потерялся человек (примерно также как Вас уведомляют о новом сообщении в социальных сетях).
+    После просмотра объявления, Вы решаете, присоединиться к поискам или нет. Кроме этого у клиента на выбор есть
+    несколько действий: сообщить о том, что видел или нашёл. Если Вы видели пропавшего, то указываете на карте место,
+    где Вы находились в тот момент.
+    <br/>Есть возможность отслеживать ситуацию, даже если Вы не присоединились к поискам. В этом случае Вы будете
+    получать уведомления о любых изменениях. Например, такие:
+</p>
+<ul>
+    <li>Пропавший найден (то есть поиск завершен);</li>
+    <li>Пропавший не найден (прошло более 3-х дней, заявка переход в долгосрочный поиск);</li>
+    <li>Изменение информации в объявлении (например, оказалось что пропавший был одет не в синюю футболку, а в белую
+        майку и т.д. )
+    </li>
+    <li>Добавлена информация на карту (отмечены новые места, где пропавший чаще всего бывает/участник поиска указал
+        место, где недавно видел пропавшего и т.д.)
+    </li>
+</ul>
+<p>
+    Стоит отметить и то, что если Вы присоединились к поиску и включили GPS, то Ваше местоположение и маршрут будут
+    отображаться на карте. Это нужно для того, чтобы все участники хорошо видели покрытие зоны поиска и концентрацию
+    других участников в разных местах.
+</p>
+<h2>Нет поводов беспокоиться</h2>
+<p>Приложение гарантирует сохранность Ваших личных данных и не допустит распространение ложной информации. Всегда есть
+    возможность опубликовать объявление о пропаже анонимно (это обусловлено рядом факторов, а также позволяет не тратить
+    время на регистрацию аккаунта). Местоположение пользователей не будет отправлено на сервер до тех пор, пока они не
+    согласятся присоединиться к поиску (что также гарантирует анонимность и не создает лишней нагрузки на сервер и
+    канал). API и клиенты будут открытыми - любой пользователь может прочитать исходный код (на случай, если Вы станете
+    беспокоиться, что приложение “следит” за Вами). Более детально технические особенности можно посмотреть тут.
+    <br/>Если опустить технические аспекты работы приложения: всё достаточно удобно и просто. Помимо того, что Ваше
+    объявление позволит собрать достаточное количество людей для эффективного поиска, оно повысит бдительность людей,
+    которые не захотели присоединяться, но тем не менее получили уведомление.
+</p>
+<div class="alert alert-info" role="alert">
+    Пожалуйста подпишитесь на нашу
+    <a target="_blank" href="https://vk.com/xaniprojects" onclick="trackOutboundLink('https://vk.com/xaniprojects'); return false;">группу вконтакте</a>.
+    Там мы будем сообщать о всех новостях.
+</div>
+    <br/>Помощь проекту
+<p>   На данный момент в разработке проекта участвуют два человека. Проект большой, перспективный, и для его реализации
+    команде нужны сильные, амбициозные и креативные люди. Если говорить конкретнее, сейчас мы очень нуждаемся:
+<ul>
+    <li>В хорошем копирайтере;</li>
+    <li>В web-дизайнере (и дизайнере приложений, а ещё иллюстраторе);</li>
+    <li>В верстальщике;</li>
+    <li>В SEO-консультанте.</li>
+</ul>
+<p>
+    Это список людей, необходимых на данном этапе реализации проекта. И если Вы не являетесь копирайтером, не сильны в
+    верстке, но очень хотите помочь проекту: напишите нам. Укажите Ваши навыки, предложения и идеи в письме (или в
+    сообщении в группу ВКонтакте), и мы найдем где это применить :). <a href="/donate/#speciality">Подробнее смотрите тут</a>.
+    <br/>
+    Также Вы можете:
+<ul>
+    <li><a href="/donate/#dissemination-information">Рассказать о проекте в социальных сетях</a></li>
+    <li><a href="/donate/#money">Пожертвовать денежные средства</a></li>
+    <li>Чтобы узнать все подробности о проекте, переходите по ссылкам социальных сетей внизу или напишите нам на
+        email <a href="mailto:xaniprojects@gmail.com">xaniprojects@gmail.com</a> .</li>
+</ul>
+Спасибо за просмотр данной информации!
+</p>
+
+
+        </div>
+    </div>
+</div>
+<hr>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a target="_blank" href="https://twitter.com/XaniProjects" onclick="trackOutboundLink('https://twitter.com/XaniProjects'); return false;">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://vk.com/xaniprojects" onclick="trackOutboundLink('https://vk.com/xaniprojects'); return false;">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-vk fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/Xani-projects-1835218020085526/" onclick="trackOutboundLink('https://www.facebook.com/Xani-projects-1835218020085526/'); return false;">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://github.com/xani-projects"  onclick="trackOutboundLink('https://github.com/xani-projects'); return false;">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                    </li>
+                </ul>
+                <p class="copyright text-muted">email: <a href="mailto:xaniprojects@gmail.com">xaniprojects@gmail.com</a></p>
+                <p class="copyright text-muted">Copyright © Xani-Projects 2017 </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="/js/bootstrap.min.js"> </script>
+<script src="/js/navigation.js"></script>
 </body>
 </html>
